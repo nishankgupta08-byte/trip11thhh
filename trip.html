@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaipur Memories</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Page description for SEO -->
+    <meta name="description" content="A personal travel blog showcasing memories, photos, and videos from Udaipur and Chittorgarh.">
+
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+    <h1 data-aos="fade-up" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-align:center;">
+        UDAIPUR – CITY OF LAKES
+    </h1>
+
+    <p data-aos="fade-up" style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
+        Udaipur, often called the <b>City of Lakes</b>, is a stunning destination in Rajasthan known for its royal
+        palaces, peaceful lakes, and charming old streets. The city blends natural beauty with rich history, making it
+        one of India’s most romantic tourist spots. Popular attractions include the magnificent City Palace, the serene
+        Lake Pichola, and the historic Jag Mandir. From boat rides to exploring vibrant markets, Udaipur offers an
+        unforgettable experience for every traveler.
+    </p>
+
+    <hr>
+
+    <!-- CHITTORGARH SECTION -->
+    <h2 data-aos="fade-up" style="text-align:center;">CHITTORGARH</h2>
+    <p data-aos="fade-up" style="font-size: 15px; font-family: Arial;">
+        A memorable moment from Chittorgarh Fort, one of the largest forts in India. Known for its bravery, history,
+        and massive architecture, the fort stands as a symbol of Rajputana pride.
+    </p>
+    <img src="nwe.jpg" alt="Group photo at Chittorgarh Fort" style="width:100%; max-width:800px; display:block; margin:auto;">
+
+    <hr>
+
+    <!-- RANDOM PARK -->
+    <h2 data-aos="fade-up" style="text-align:center;">UDAIPUR RANDOM PARK</h2>
+    <p data-aos="fade-up" style="font-size: 15px; font-family: Arial;">
+        A peaceful park in Udaipur where we spent a calm evening together. Lush greenery and a relaxing environment made
+        it a perfect spot for photos and fun.
+    </p>
+    <img src="1.jpg" alt="Park in Udaipur" data-aos="fade-up" style="width:100%; max-width:800px; display:block; margin:auto;">
+
+    <hr>
+
+    <!-- NADI / DOST -->
+    <h2 data-aos="fade-up" style="text-align:center;">NADI & 4 DOST</h2>
+    <p style="font-size: 15px; font-family: Arial;">
+        A fun moment with friends near the riverside. One of those memories that stay special forever.
+    </p>
+    <img src="2.jpg" alt="Friends near riverside" style="width:100%; max-width:800px; display:block; margin:auto;">
+
+    <hr>
+
+    <!-- BROTHERS -->
+    <h2 style="text-align:center;">BROTHERS</h2>
+    <p style="font-size: 15px; font-family: Arial;">
+        A photo capturing our bond — more like family than friends.
+    </p>
+    <img src="3.jpg" alt="Group of brothers posing together" style="width:100%; max-width:800px; display:block; margin:auto;">
+
+    <hr>
+
+    <!-- GARDEN SECTION -->
+    <h2 style="text-align:center;">MAHARANA JI DA GARDEN</h2>
+    <p style="font-size: 15px; font-family: Arial;">
+        A quiet and beautiful garden inspired by Rajput architecture — one of the most peaceful places we visited.
+    </p>
+    <img src="4.jpg" alt="Historic garden in Udaipur" style="width:100%; max-width:800px; display:block; margin:auto;">
+
+    <hr>
+
+    <!-- VIDEO SECTION -->
+    <h2 style="text-align:center;">ANKIT (PINK LIPS)</h2>
+    <div style="text-align:center;">
+        <video controls style="width:90%; max-width:700px;">
+            <source src="3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2 style="text-align:center;">PICHE WALA TAPU</h2>
+    <div style="text-align:center;">
+        <video controls style="width:90%; max-width:700px;">
+            <source src="7.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <h2 style="text-align:center;">NAUKA CHALA RAHE 🚤</h2>
+    <div style="text-align:center;">
+        <video controls style="width:90%; max-width:700px;">
+            <source src="6.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
+    <!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img">
+</div>
+
+<script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll("img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.onclick = () => lightbox.style.display = "none";
+    lightbox.onclick = (e) => { 
+        if (e.target !== lightboxImg) lightbox.style.display = "none";
+    };
+</script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+</body>
+
+</html>
